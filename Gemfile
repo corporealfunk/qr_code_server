@@ -9,6 +9,8 @@ gem 'haml'
 
 gem 'haml-rails', group: :development
 
+gem 'rqrcode_png'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 
@@ -21,6 +23,8 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer',  platforms: :ruby
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
