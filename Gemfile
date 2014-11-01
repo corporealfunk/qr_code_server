@@ -56,3 +56,4 @@ gem 'unicorn'
 
 gem 'capistrano'
 gem 'capistrano-rvm'
+gem 'capistrano-bundler', '~> 1.1.2'
