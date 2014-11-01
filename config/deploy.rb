@@ -46,6 +46,14 @@ namespace :deploy do
     end
   end
 
+  desc 'Copy Rails 4 Secrets'
+  task :secrets do
+    on roles(:app) do
+      upload! "config/secrets.yml", "#{current_path}/config/secrets.yml"
+    end
+  end
+
+  after :publishing, :secrets
   after :publishing, :restart
 
   after :restart, :clear_cache do
