@@ -1,0 +1,60 @@
+%h1 QR Code Server API
+%h2
+  %code /api/qr_code/new
+%table.table
+  %tr
+    %th Parameter
+    %th Description
+    %th Default
+    %th Required
+  %tr
+    %td d
+    %td The data to encode
+    %td
+    %td yes
+  %tr
+    %td r
+    %td Pixel dimension of the image
+    %td 150
+    %td no
+  %tr
+    %td l
+    %td
+      Error correction level:
+      %ul
+        %li
+          %code l
+          \= low
+        %li
+          %code m
+          \= medium
+        %li
+          %code q
+          \= quartile
+        %li
+          %code h
+          \= high
+    %td h
+    %td no
+  %tr
+    %td v
+    %td
+      QR Code "Version"
+      %br
+      %code 1-14
+    %td Determines lowest possible
+    %td no
+%h3 Examples
+%ul
+  %li
+    %code
+      %a(href="/api/qr_code/new?d=qr codes are fun") /api/qr_code/new?d=qr codes are fun
+  %li
+    %code
+      %a(href="/api/qr_code/new?d=qr codes are fun&r=250") /api/qr_code/new?d=qr codes are fun&r=250
+  %li
+    %code
+      %a(href="/api/qr_code/new?d=qr codes are fun&l=l") /api/qr_code/new?d=qr codes are fun&l=l
+  %li
+    %code
+      %a(href="/api/qr_code/new?d=qr codes are fun&v=14") /api/qr_code/new?d=qr codes are fun&v=14
