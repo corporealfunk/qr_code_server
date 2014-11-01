@@ -53,3 +53,6 @@ gem 'unicorn'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'capistrano'
+gem 'capistrano-rvm'
