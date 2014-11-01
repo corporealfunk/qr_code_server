@@ -37,6 +37,6 @@ class Api::QrCodesController < ApplicationController
     png = qr.to_img
 
     resolution = resolution.to_i
-    send_data(png.resize(resolution, resolution), :type => 'image/gif', :disposition => 'inline')
+    send_data(png.resize(resolution, resolution), :type => 'image/png', :disposition => 'inline')
   end
 end
